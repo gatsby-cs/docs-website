@@ -8509,10 +8509,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@3.6.0-alpha-parallel-query.68+975874fdc6:
-  version "3.6.0-alpha-parallel-query.68"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-3.6.0-alpha-parallel-query.68.tgz#868979ff269de322253fdb4998c0ceab3efa237a"
-  integrity sha512-ux/sz8Xhg0gMShQvgYLocDMfee9VfSMwXRAurmBD/daCrVSg2lodv4izIx+QS4iYq39AL6NRV6MUnaFHsxyB6g==
+gatsby-cli@3.6.0-alpha-parallel-query.74+5e69363f1c:
+  version "3.6.0-alpha-parallel-query.74"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-3.6.0-alpha-parallel-query.74.tgz#1bae8d7329ce8891215db7ee05b2ab1b039793d7"
+  integrity sha512-e40FMnyV5xUGSZkil+Cb4YiL8Ppa+qr490OnfGmKcapEJ4UGRE82iRZliKF+x7fsTmVahc6VbUCQYf2NSEOlHg==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@types/common-tags" "^1.8.0"
@@ -8719,10 +8719,10 @@ gatsby-plugin-manifest@^3.5.0:
     semver "^7.3.5"
     sharp "^0.28.1"
 
-gatsby-plugin-mdx@2.6.0-alpha-parallel-query.68:
-  version "2.6.0-alpha-parallel-query.68"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-2.6.0-alpha-parallel-query.68.tgz#ed8f3b666636ef8410891874248bcdfdd26a18d3"
-  integrity sha512-81HSOnKOttorx8MDrbLynAlarw+YjUR5/Zc1AC9Iu9+zkh9Xh7KIe0KkpdBEPgWrvjRIJDDR3FhEXrVsCAVMJA==
+gatsby-plugin-mdx@2.6.0-alpha-parallel-query.74:
+  version "2.6.0-alpha-parallel-query.74"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-2.6.0-alpha-parallel-query.74.tgz#64c63c4027c258482e50671845787298bb25dab7"
+  integrity sha512-lRFikPuDMsi2xYMriQn7L9G4avI1NeORk/yp8azQD4Y5oVN40+QgFFItUAgdncjt68ONRmsvsmLwQcWzfi0KuQ==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/generator" "^7.12.5"
@@ -9234,10 +9234,10 @@ gatsby-transformer-yaml@^3.5.0:
     lodash "^4.17.21"
     unist-util-select "^1.5.0"
 
-gatsby@3.6.0-alpha-parallel-query.68:
-  version "3.6.0-alpha-parallel-query.68"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.6.0-alpha-parallel-query.68.tgz#609ebfa7ba91ea8bbf721b6d1d4a51b4e2f3fa7e"
-  integrity sha512-mFDlXF7YnRbt3sWYcO84LQc/gDyrENpRayhceAlWf5pUQZ7aOVeEG4YxKaI/vn+mr0HTxDiRbqmARTZltj6gUA==
+gatsby@3.6.0-alpha-parallel-query.74:
+  version "3.6.0-alpha-parallel-query.74"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.6.0-alpha-parallel-query.74.tgz#a0429c8c3f0b1d40fb4aa4c417d1bacb3e5b45ea"
+  integrity sha512-CAhxNRukE7Rv3EwHXyEBRNonKGtZGGCcJ+BT3bnb+0UAmTDaAXrxwoM6L0Pw5ldS4Is/8bSvAWGPo814oPLSFA==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
@@ -9305,7 +9305,7 @@ gatsby@3.6.0-alpha-parallel-query.68:
     find-cache-dir "^3.3.1"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "3.6.0-alpha-parallel-query.68+975874fdc6"
+    gatsby-cli "3.6.0-alpha-parallel-query.74+5e69363f1c"
     gatsby-core-utils "2.7.0-next.0"
     gatsby-graphiql-explorer "1.7.0-next.0"
     gatsby-legacy-polyfills "1.7.0-next.0"
