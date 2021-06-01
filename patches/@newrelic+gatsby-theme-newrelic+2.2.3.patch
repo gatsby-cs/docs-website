@@ -1,0 +1,14 @@
+diff --git a/node_modules/@newrelic/gatsby-theme-newrelic/gatsby-node.js b/node_modules/@newrelic/gatsby-theme-newrelic/gatsby-node.js
+index 61beffb..caef2cc 100644
+--- a/node_modules/@newrelic/gatsby-theme-newrelic/gatsby-node.js
++++ b/node_modules/@newrelic/gatsby-theme-newrelic/gatsby-node.js
+@@ -42,6 +42,9 @@ exports.onPreInit = (_, themeOptions) => {
+ };
+ 
+ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
++  if (process.env.JEST_WORKER_ID) {
++    return
++  }
+   const { program } = store.getState();
+   const tessenLibrary = path.join(
+     program.directory,
