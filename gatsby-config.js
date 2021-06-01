@@ -24,6 +24,7 @@ module.exports = {
     DEV_SSR: true,
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    BUILD_SCHEMA_IN_DIFF_PROC: true,
   },
   siteMetadata: {
     title: 'New Relic Documentation',
