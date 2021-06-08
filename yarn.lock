@@ -10016,10 +10016,10 @@ gatsby-transformer-yaml@^3.5.0:
     lodash "^4.17.21"
     unist-util-select "^1.5.0"
 
-gatsby@^3.8.0-alpha-log-state-slice-size.36:
-  version "3.8.0-alpha-log-state-slice-size.36"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.8.0-alpha-log-state-slice-size.36.tgz#54fe0d91cee33feab80933002ad608040a4fbf55"
-  integrity sha512-2GMYs61prAHpDUq1WINKldmGvGM50YmVmD2HxoHVhHFpc5iN48WCl0+pWP2i/NSoqz5DsiJ6EBsGDRCy24GmNA==
+gatsby@^3.8.0-alpha-log-state-slice-size.37:
+  version "3.8.0-alpha-log-state-slice-size.37"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.8.0-alpha-log-state-slice-size.37.tgz#59df877480ca409e7268e4f454de9272cf3c6491"
+  integrity sha512-Fv/vyrEO5DIgbXHT9gUUQ2B6vE54F57+y2ILQ9BiLUDO9X+jndrfaZX9jseazGxHDJXZ2EP/DtdSenKwl9tKDA==
   dependencies:
     "@babel/code-frame" "^7.12.13"
     "@babel/core" "^7.14.3"
