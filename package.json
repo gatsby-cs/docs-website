@@ -20,7 +20,7 @@
     "gatsby-plugin-gatsby-cloud": "^2.5.0",
     "gatsby-plugin-json-output": "^1.2.0",
     "gatsby-plugin-manifest": "^3.5.0",
-    "gatsby-plugin-mdx": "^2.5.1",
+    "gatsby-plugin-mdx": "2.10.0-next.0",
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-newrelic": "^1.0.5",
     "gatsby-plugin-offline": "^3.10.1",
