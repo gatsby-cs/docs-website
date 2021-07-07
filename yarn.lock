@@ -10101,17 +10101,17 @@ gatsby-transformer-yaml@^3.5.0:
     lodash "^4.17.21"
     unist-util-select "^1.5.0"
 
-gatsby-worker@0.1.0-alpha-pqr-debug.18665+0164976113:
-  version "0.1.0-alpha-pqr-debug.18665"
-  resolved "https://registry.yarnpkg.com/gatsby-worker/-/gatsby-worker-0.1.0-alpha-pqr-debug.18665.tgz#3e068be5740703dd4e22823545da96083fd5060a"
-  integrity sha512-57On+O0WOf+miuh0aNuz3q3aKt+/fP2mv1JML6cg+XYuBj68NPAWs9cpa8frUbV3yVKLeQWVInxv+G7YQczWgw==
+gatsby-worker@0.1.0-alpha-pqr-debug.18666+b0cc844ec0:
+  version "0.1.0-alpha-pqr-debug.18666"
+  resolved "https://registry.yarnpkg.com/gatsby-worker/-/gatsby-worker-0.1.0-alpha-pqr-debug.18666.tgz#29c80ea79a8ace6c3c4c38c54859e368ac20b64d"
+  integrity sha512-lxCvSqePkJ8KbWrpyYq514UYJwKE+gT+65riN1Ivcqbo+blKqQTxCVyXjMO+FV8q6bkvvvhyGclYJe1s1AGWsQ==
   dependencies:
     "@babel/core" "^7.14.0"
 
-gatsby@^3.9.0-alpha-pqr-debug.30:
-  version "3.9.0-alpha-pqr-debug.30"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.9.0-alpha-pqr-debug.30.tgz#8574513fe059a64995cd59c46e020430807506ba"
-  integrity sha512-NlHfEz5qhSr5+bq0Dh+VYp6AydGdML3N6rDagwdwHWP2uzPII4Ku0J1BjpNH2Y9GAWkhl0+lriNvyvud2F5C8Q==
+gatsby@^3.9.0-alpha-pqr-debug.31:
+  version "3.9.0-alpha-pqr-debug.31"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.9.0-alpha-pqr-debug.31.tgz#15328d23e79582ffa05382d33a9242e645096882"
+  integrity sha512-5Pb7pdOJa2d2m5lOD+PfKE0emjeSm5FMmUfxzA/ok4ZsIpkYLRDBI/AbH0f32IRHiXoWbCJolnLZoAuQvJnMlQ==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/core" "^7.14.0"
@@ -10188,7 +10188,7 @@ gatsby@^3.9.0-alpha-pqr-debug.30:
     gatsby-plugin-utils "1.10.0-next.0"
     gatsby-react-router-scroll "4.10.0-next.0"
     gatsby-telemetry "2.10.0-next.0"
-    gatsby-worker "0.1.0-alpha-pqr-debug.18665+0164976113"
+    gatsby-worker "0.1.0-alpha-pqr-debug.18666+b0cc844ec0"
     glob "^7.1.6"
     got "8.3.2"
     graphql "^15.4.0"
