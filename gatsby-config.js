@@ -21,7 +21,7 @@ const autoLinkHeaders = {
 
 module.exports = {
   flags: {
-    LMDB_STORE: true,
+    PARALLEL_QUERY_RUNNING: true,
     DEV_SSR: true,
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
