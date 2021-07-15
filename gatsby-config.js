@@ -1,3 +1,5 @@
+process.env.GATSBY_CPU_COUNT = '4';
+
 const fs = require('fs');
 const parse = require('rehype-parse');
 const path = require('path');
@@ -22,6 +24,7 @@ const autoLinkHeaders = {
 module.exports = {
   flags: {
     LMDB_STORE: true,
+    PARALLEL_QUERY_RUNNING: true,
     DEV_SSR: true,
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
