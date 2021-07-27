@@ -21,7 +21,7 @@ const autoLinkHeaders = {
 
 module.exports = {
   flags: {
-    PARALLEL_QUERY_RUNNING: true,
+    PARALLEL_QUERY_RUNNING: false,
     DEV_SSR: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
