@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          curl -H "x-gatsby-cache: false" -X POST -d {} https://webhook.gatsbyjs.com/hooks/data_source/publish/e59971ce-b059-4218-93c8-b0752b2b4ffb
+          curl -H "x-gatsby-cache: false" -X POST -d {} https://webhook.gatsbyjs.com/hooks/builds/trigger/e59971ce-b059-4218-93c8-b0752b2b4ffb
