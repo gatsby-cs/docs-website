@@ -1,0 +1,13 @@
+# Since our cache status is not reliable in telemetry, we force cold builds for a specific site every hour
+# So we get cold and warm build timings. This is for the cold build.
+name: Gatsby 4 Cold Build Only
+on:
+  schedule:
+    - cron: '* 0-23 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: gatsby 4 cold build
+    steps:
+      - run: |
+          curl -H "x-gatsby-cache: false" -X POST -d {} https://webhook.gatsbyjs.com/hooks/builds/trigger/625bb53d-60cf-487c-9148-5f8fdecb68ac
