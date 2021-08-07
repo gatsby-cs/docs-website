@@ -1,0 +1,12 @@
+# To collect build duration & memory usage, we trigger two builds
+# So we get cold and warm build timings. This is for the cold build.
+name: Cold Build for New Relic without Gatsby 4
+on:
+  schedule:
+    - cron: '* 0-23 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -H "x-gatsby-cache: false" -X POST -d {} https://webhook.gatsbyjs.com/hooks/builds/trigger/eaf7354f-d294-4df8-b94e-23902346203c
