@@ -3,7 +3,7 @@
 name: Gatsby 4 Cold Build Only
 on:
   schedule:
-    - cron: '* 0-23 * * *'
+    - cron: '* 1,4,7,10,13,16,19,22 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
