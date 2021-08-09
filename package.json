@@ -45,6 +45,7 @@
     "jsdom": "^16.5.0",
     "lmdb-store": "^1.6.3",
     "lodash": "^4.17.21",
+    "node-polyfill-webpack-plugin": "^1.1.4",
     "parse-link-header": "^1.0.1",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.4",
