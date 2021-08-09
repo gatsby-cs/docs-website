@@ -27,7 +27,7 @@ After reporting this data, you can [explore and query it](/docs/query-your-data/
 
 Start all custom metric names with `Custom/`; for example, `Custom/MyMetric/My_label`. The `Custom/` prefix is required for all custom metrics.
 
-Any custom metric names that do not start with `Custom/` are subject to all other grouping rules. They may not be visible in Insights, or they may not appear as expected in the New Relic UI.
+Any custom metric names that do not start with `Custom/` are subject to all other grouping rules. They may not be visible when querying, or they may not appear as expected in the UI.
 
 ![custom-metric-syntax.png](./images/custom-metric-syntax.png "custom-metric-syntax.png")
 
@@ -89,7 +89,7 @@ Implementing custom metrics requires API calls. The exact details of the API cal
       </td>
 
       <td>
-        Browser does not support custom metrics. For options on adding custom data to Browser, see [Browser instrumentation](/docs/browser/new-relic-browser/page-load-timing-resources/instrumentation-browser-monitoring).
+        Browser does not support custom metrics. For options on adding custom data to browser, see [browser instrumentation](/docs/browser/new-relic-browser/page-load-timing-resources/instrumentation-browser-monitoring).
       </td>
     </tr>
   </tbody>

@@ -1,5 +1,5 @@
-const fs = require('fs');
 const parse = require('rehype-parse');
+const fs = require('fs');
 const path = require('path');
 const unified = require('unified');
 const rehypeStringify = require('rehype-stringify');
@@ -21,9 +21,8 @@ const autoLinkHeaders = {
 
 module.exports = {
   flags: {
-    LMDB_STORE: true,
+    PARALLEL_QUERY_RUNNING: true,
     DEV_SSR: true,
-    PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
   siteMetadata: {

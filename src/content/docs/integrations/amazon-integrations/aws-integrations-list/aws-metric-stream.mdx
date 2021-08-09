@@ -90,7 +90,8 @@ Next, set up the metric stream using the [CloudFormation template](https://conso
   * Ensure the following settings are defined:
     * Third-party service provider: New Relic - Metrics
     * New Relic configuration
-      * HTTP endpoint URL (US Datacenter): `https://aws-api.newrelic.com/cloudwatch-metrics/v1`
+      * HTTP endpoint URL - US Datacenter: `https://aws-api.newrelic.com/cloudwatch-metrics/v1`
+      * HTTP endpoint URL - EU Datacenter: `https://aws-api.eu01.nr-data.net/cloudwatch-metrics/v1`
       * API key: Enter your [license key](/docs/accounts/accounts-billing/account-setup/new-relic-license-key/)
       * Content encoding: `GZIP`
       * Retry duration: `60`
@@ -109,15 +110,24 @@ Next, set up the metric stream using the [CloudFormation template](https://conso
     * Use inclusion and exclusion filters to select which services should push metrics to New Relic.
     * Select your Kinesis Data Firehose.
     * Define a meaningful name for the stream (for example, newrelic-metric-stream).
+  * Change default output format to `Open Telemetry 0.7` (JSON is not supported)
   * Confirm the creation of the metric stream. 
 
   Alternatively, you can find instructions on the AWS documentation in order to create the CloudWatch metric stream using a CloudFormation template, API, or the CLI.
 
 3. ** Add the new AWS account** in the **Metric streams** mode in the New Relic UI. 
   Go to **[one.newrelic.com](https://one.newrelic.com/) > Infrastructure > AWS**, click on **Add an AWS account**, then on **Use metric streams**, and follow the steps.
+  
+<Callout variant="tip">
+  The following are the minimal permissions that should be granted on the AWS role configured in New Relic so that CloudWatch metrics can be enriched with additional service metadata and custom tags when applicable:
 
-<Callout variant="caution">
-The AWS Metric Streams integration is temporarily disabled for accounts hosted in the New Relic EU datacenter. 
+  ```
+  config:BatchGetResourceConfig
+  config:ListDiscoveredResources
+  tag:GetResources
+  ```
+  
+  The New Relic UI currently recommends the `ReadOnlyAccess` policy over these individual items so that New Relic has proper permissions to collect service data that's not available in AWS CloudWatch Metric Streams.
 </Callout>
 
 ## Validate your data is received correctly [#validate-data]
@@ -249,7 +259,7 @@ FROM Metric SELECT bytecountestimate() where collector.name='cloudwatch-metric-s
 
 We recommend the following actions to control the data being ingested:
 * Make sure metric streams are enabled only on the AWS accounts and regions you want to monitor with New Relic.
-* Use the inclusion and exclusion filters in CloudWatch Metric Stream is order to select which services / namespaces are being collected.
+* Use the inclusion and exclusion filters in the CloudWatch Metric Stream in order to select which services / namespaces are being collected.
 * Consider using [drop data rules](https://docs.newrelic.com/docs/telemetry-data-platform/manage-data/drop-data-using-nerdgraph/) to discard metrics based on custom filters (for example, drop metrics by namespace and tag, tag value, or any other valid NRQL criteria).
 
 <Callout variant="important">
