@@ -374,6 +374,7 @@ const createPageFromNode = (
 
   if (process.env.NODE_ENV === 'development' && !template) {
     createPage({
+      defer: true,
       path: path.join(prefix, slug, '/'),
       component: path.resolve(TEMPLATE_DIR, 'dev/missingTemplate.js'),
       context: {
@@ -384,6 +385,7 @@ const createPageFromNode = (
     });
   } else {
     createPage({
+      defer: true,
       path: path.join(prefix, slug, '/'),
       component: path.resolve(path.join(TEMPLATE_DIR, `${template}.js`)),
       context: {
