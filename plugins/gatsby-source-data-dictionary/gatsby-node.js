@@ -1,3 +1,4 @@
+const path = require('path');
 const { difference } = require('lodash');
 
 const uniq = (arr) => [...new Set(arr)];
@@ -43,8 +44,10 @@ exports.sourceNodes = (
 ) => {
   const { createNode, createRedirect } = actions;
 
+  const normPath = path.normalize(pluginOptions.path);
+
   const dataDictionaryNodes = getNodesByType('MarkdownRemark').filter((node) =>
-    node.fileAbsolutePath.includes(pluginOptions.path)
+    path.normalize(node.fileAbsolutePath).includes(normPath)
   );
 
   const attributeEvents = uniq(

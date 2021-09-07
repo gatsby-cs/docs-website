@@ -21,7 +21,7 @@ const autoLinkHeaders = {
 
 module.exports = {
   flags: {
-    PARALLEL_QUERY_RUNNING: true,
+    LMDB_STORE: true,
     DEV_SSR: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
@@ -198,18 +198,18 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'New Relic Documentation',
-        short_name: 'New Relic Documentation',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     name: 'New Relic Documentation',
+    //     short_name: 'New Relic Documentation',
+    //     start_url: '/',
+    //     background_color: '#663399',
+    //     theme_color: '#663399',
+    //     display: 'minimal-ui',
+    //     icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
@@ -288,6 +288,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
+        lessBabel: true,
         // Include our patch for handling indented code blocks to ensure the
         // fence does not get rendered as part of the block. There is an open
         // issue in the MDX project about this:
@@ -332,7 +333,7 @@ module.exports = {
           // .gif extension to the public folder.
           //
           // Source: https://github.com/gatsbyjs/gatsby/issues/7317#issuecomment-412984851
-          'gatsby-remark-copy-linked-files',
+          // 'gatsby-remark-copy-linked-files',
           {
             resolve: require.resolve('./plugins/gatsby-remark-gifs'),
             options: {
@@ -520,6 +521,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-meta-redirect',
-    'gatsby-plugin-gatsby-cloud',
+    // 'gatsby-plugin-gatsby-cloud',
   ],
 };
