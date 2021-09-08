@@ -1,6 +1,8 @@
+const preferDefault = (m) => (m && m.default) || m;
+
 const visit = require('unist-util-visit');
 const { JSDOM } = require('jsdom');
-const fromDom = require('hast-util-from-dom');
+const fromDom = preferDefault(require('hast-util-from-dom'));
 
 module.exports = ({ markdownAST }) => {
   visit(markdownAST, 'html', (node) => {
