@@ -360,7 +360,8 @@ module.exports = {
         path: `./src/nav/`,
       },
     },
-    'gatsby-plugin-generate-doc-json',
+    // FIXME: the following plugins fail with DSG, see https://app.clubhouse.io/gatsbyjs/story/37038/make-new-relic-work-with-deferred-static-generation#activity-37795
+    // 'gatsby-plugin-generate-doc-json',
     // Comment in below to run a build that checks links
     // 'gatsby-plugin-check-links',
     {
@@ -504,9 +505,9 @@ module.exports = {
             .filter(({ date, agent }) => Boolean(date && agent)),
       },
     },
-    'gatsby-plugin-release-note-rss',
-    'gatsby-plugin-whats-new-rss',
-    'gatsby-plugin-security-bulletins-rss',
+    // 'gatsby-plugin-release-note-rss',
+    // 'gatsby-plugin-whats-new-rss',
+    // 'gatsby-plugin-security-bulletins-rss',
     {
       resolve: 'gatsby-source-data-dictionary',
       options: {
@@ -520,7 +521,7 @@ module.exports = {
         skippedDirectories: ['', 'whats-new', 'docs/release-notes'],
       },
     },
-    'gatsby-plugin-meta-redirect',
+    // 'gatsby-plugin-meta-redirect',
     // 'gatsby-plugin-gatsby-cloud',
   ],
 };
