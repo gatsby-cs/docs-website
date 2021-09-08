@@ -157,7 +157,7 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
   });
 
   visit(list, 'directory', (dir) => {
-    const slug = `/${dir.path}`;
+    const slug = `/${dir.path.replace(/\\/g, `/`)}`;
 
     if (skippedDirectories.includes(dir.path)) {
       return [visit.SKIP];
@@ -170,7 +170,7 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
     const html = sortIndexPage(generateHTML(dir), navData);
 
     createPage({
-      path: path.join(slug, '/'),
+      path: path.posix.join(slug, '/'),
       component: path.resolve('src/templates/indexPage.js'),
       context: {
         slug,
@@ -202,8 +202,8 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
 
   locales.forEach(({ locale }) => {
     visit(list, 'directory', (dir) => {
-      const slug = `/${dir.path}`;
-      const localizedSlug = path.join(`/${locale}`, slug);
+      const slug = `/${dir.path.replace(/\\/g, `/`)}`;
+      const localizedSlug = path.posix.join(`/${locale}`, slug);
 
       if (skippedDirectories.includes(dir.path)) {
         return [visit.SKIP];
@@ -219,7 +219,7 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
         .flatMap(prop('children'))
         .filter(isFile)
         .forEach((child) => {
-          const localizedFileSlug = path.join(
+          const localizedFileSlug = path.posix.join(
             `/${locale}`,
             child.data.fields.slug
           );
@@ -237,7 +237,7 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
           child.data.fields.slug = localizedFileSlug;
         });
       createPage({
-        path: path.join(localizedSlug, '/'),
+        path: path.posix.join(localizedSlug, '/'),
         component: path.resolve('src/templates/indexPage.js'),
         context: {
           slug: localizedSlug,
@@ -254,10 +254,10 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
       return;
     }
     const landingPageSlug = getSlug(node);
-    const slug = path.join(landingPageSlug, 'table-of-contents');
+    const slug = path.posix.join(landingPageSlug, 'table-of-contents');
 
     createPage({
-      path: path.join(slug, '/'),
+      path: path.posix.join(slug, '/'),
       component: path.resolve('src/templates/tableOfContents.js'),
       context: {
         fileRelativePath: null,
@@ -268,8 +268,8 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
     });
 
     locales.forEach(({ locale }) => {
-      const localizedSlug = path.join(`/${locale}`, slug);
-      const localizedLandingPageSlug = path.join(`/${locale}`, landingPageSlug);
+      const localizedSlug = path.posix.join(`/${locale}`, slug);
+      const localizedLandingPageSlug = path.posix.join(`/${locale}`, landingPageSlug);
 
       const translatedNode =
         translatedTableOfContentsNodes.find(
@@ -277,7 +277,7 @@ exports.createPages = async ({ actions, graphql, reporter }, pluginOptions) => {
         ) || node;
 
       createPage({
-        path: path.join(localizedSlug, '/'),
+        path: path.posix.join(localizedSlug, '/'),
         component: path.resolve('src/templates/tableOfContents.js'),
         context: {
           fileRelativePath: null,
