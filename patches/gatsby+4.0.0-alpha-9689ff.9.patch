@@ -1,0 +1,13 @@
+diff --git a/node_modules/gatsby/dist/utils/page-data.js b/node_modules/gatsby/dist/utils/page-data.js
+index 82dfc54..8196382 100644
+--- a/node_modules/gatsby/dist/utils/page-data.js
++++ b/node_modules/gatsby/dist/utils/page-data.js
+@@ -217,7 +217,7 @@ async function flush() {
+       }
+     });
+ 
+-    cb(null, true);
++    process.nextTick(() => cb(null, true));
+     return;
+   }, 25);
+ 
