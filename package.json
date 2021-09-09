@@ -28,7 +28,7 @@
     "gatsby-remark-autolink-headers": "^4.5.0",
     "gatsby-remark-copy-linked-files": "^4.5.0",
     "gatsby-remark-images": "^5.5.0",
-    "gatsby-source-filesystem": "^3.11.0-next.0",
+    "gatsby-source-filesystem": "4.0.0-alpha-9689ff.24",
     "gatsby-transformer-json": "^3.8.0",
     "gatsby-transformer-remark": "^5.0.0-alpha-9689ff.11",
     "gatsby-transformer-sharp": "4.0.0-alpha-9689ff.24",
@@ -125,7 +125,8 @@
     "node-forge": "^0.10.0",
     "node-fetch": "^2.6.1",
     "ini": "^1.3.6",
-    "yargs-parser": "^18.1.1"
+    "yargs-parser": "^18.1.1",
+    "gatsby-source-filesystem": "4.0.0-alpha-9689ff.24"
   },
   "keywords": [
     "gatsby"
